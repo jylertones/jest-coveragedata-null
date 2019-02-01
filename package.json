@@ -1,0 +1,29 @@
+{
+    "name": "jest-coveragedata-null",
+    "version": "1.0.0",
+    "description": "Demonstrates Jest issue #7758",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --coverage"
+    },
+    "author": "Tyler Jones",
+    "license": "MIT",
+    "jest": {
+        "testRegex": ".*-test\\.js$",
+        "transform": {
+            ".*\\.js$": "<rootDir>/jest.transform.js"
+        },
+        "collectCoverageFrom": [
+            "*.js",
+            "!**/node_modules/**",
+            "!jest.transform.js"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.2",
+        "@babel/preset-env": "^7.1.0",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-jest": "^23.6.0",
+        "jest": "^24.0.0"
+    }
+}
